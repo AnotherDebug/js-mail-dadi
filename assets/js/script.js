@@ -16,6 +16,8 @@ stampa un messaggio appropriato sull’esito del controllo.
 
 */
 
+/* 
+
 const emailListReg = [
     "antonio.faddanno@yahoo.it",
     "pippo.pluto@gmail.com",
@@ -26,7 +28,7 @@ const emailListReg = [
 
 let emailFound = false;
 
-//const emailRequest = prompt('Inserisci la tua E-Mail');
+const emailRequest = prompt('Inserisci la tua E-Mail');
 
 for(let i = 0; i<emailListReg.length; i++) {
   const emailList = emailListReg[i];
@@ -41,6 +43,13 @@ for(let i = 0; i<emailListReg.length; i++) {
 if(!emailFound) {
     console.log('La tua E-Mail non è presente in elenco!!');
 }
+
+
+ */
+
+
+
+
 
 
 
@@ -60,3 +69,16 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 8. In base al punteggio viene stampato il risultato.
 
 */
+
+
+console.log('=========================================================================================');
+
+
+
+
+
+const min = 1;
+const max = 6;
+const numRandom = Math.floor(Math.random() * (max - min + 1) + min);
+
+console.log(numRandom);
