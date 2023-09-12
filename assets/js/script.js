@@ -14,6 +14,12 @@ stampa un messaggio appropriato sull’esito del controllo.
 
 */
 
+const emailListReg = [
+    "antonio.faddanno@yahoo.it",
+    "pippo.pluto@gmail.com",
+    "pabloescobar@yahoo.it",
+    "ciccio.magro@gmail.com"
+];
 
 const emailRequest = prompt('Inserisci la tua E-Mail');
 
