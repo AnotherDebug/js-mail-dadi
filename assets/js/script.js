@@ -86,5 +86,9 @@ const listPlayers = [
     "PC"
 ];
 
+for(let i = 0; i<listPlayers.length; i++){
+    
+};
+
 console.log(numRandom);
 
