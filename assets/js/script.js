@@ -14,3 +14,7 @@ stampa un messaggio appropriato sull’esito del controllo.
 
 */
 
+
+const emailRequest = prompt('Inserisci la tua E-Mail');
+
+console.log(emailRequest);
