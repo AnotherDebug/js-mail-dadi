@@ -23,8 +23,5 @@ const emailListReg = [
 
 const emailRequest = prompt('Inserisci la tua E-Mail');
 
-for(let i = 0; i<emailListReg.length;) {
-if(emailRequest === emailListReg){};
+for(let i = 0; i<emailListReg.length; i++) {
 };
-
-    console.log(emailListReg);
