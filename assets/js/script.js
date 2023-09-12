@@ -64,6 +64,7 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 3. Dichiaro una lista di giocatori "giocatore e pc";
 4. Creo un ciclo for;
 5. Dichiaro una variabile all'interno del ciclo con indice corrispondente;
+6. Dichiaro due variabili che conterranno ciascuno il numero randomico;
 6. In base all'indice creo un filtro per salvare il numero random in una variabile, una per giocatore e una per pc.
 7. Con un filtro si stabilisce chi fa il punteggio più alto;
 8. In base al punteggio viene stampato il risultato.
@@ -80,6 +81,8 @@ console.log('===================================================================
 const min = 1;
 const max = 6;
 const numRandom = Math.floor(Math.random() * (max - min + 1) + min);
+let playerX;
+let pc;
 
 const listPlayers = [
     "Giocatore x",
