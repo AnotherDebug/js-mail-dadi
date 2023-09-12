@@ -81,4 +81,10 @@ const min = 1;
 const max = 6;
 const numRandom = Math.floor(Math.random() * (max - min + 1) + min);
 
+const listPlayers = [
+    "Giocatore x",
+    "PC"
+];
+
 console.log(numRandom);
+
