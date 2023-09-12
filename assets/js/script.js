@@ -33,11 +33,11 @@ for(let i = 0; i<emailListReg.length; i++) {
 
   if(emailRequest === emailList) {
     emailFound = true;
-    console.log('ciao');
+    console.log('La tua E-Mail è presente in elenco.');
   }
 
-  if(!emailFound){
-    console.log('riprova');
-  }
-    
 };
+
+if(!emailFound) {
+    console.log('La tua E-Mail non è presente in elenco!!');
+}
