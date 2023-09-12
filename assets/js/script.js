@@ -16,45 +16,36 @@ stampa un messaggio appropriato sull’esito del controllo.
 
 */
 
-const messageRef = document.getElementById('message');
-const emailRequestRef = document.getElementById('emailRequest');
+const messageRef = document.getElementById("message");
+const emailRequestRef = document.getElementById("emailRequest");
 
 const emailListReg = [
-    "antonio.faddanno@yahoo.it",
-    "pippo.pluto@gmail.com",
-    "pabloescobar@yahoo.it",
-    "ciccio.magro@gmail.com",
-    "asd"
+  "antonio.faddanno@yahoo.it",
+  "pippo.pluto@gmail.com",
+  "pabloescobar@yahoo.it",
+  "ciccio.magro@gmail.com",
+  "asd",
 ];
 
 let emailFound = false;
 
-const emailRequest = prompt('Inserisci la tua E-Mail');
+const emailRequest = prompt("Inserisci la tua E-Mail");
 
-for(let i = 0; i<emailListReg.length; i++) {
+for (let i = 0; i < emailListReg.length; i++) {
   const emailList = emailListReg[i];
 
-  if(emailRequest === emailList) {
+  if (emailRequest === emailList) {
     emailFound = true;
-    messageRef.innerHTML = 'La tua mail è presente in elenco! Puoi accedere.';
-    emailRequestRef.className = 'bg-chart-ad';
+    messageRef.innerHTML = "La tua mail è presente in elenco! Puoi accedere.";
+    emailRequestRef.className = "bg-chart-ad";
   }
-
-};
-
-if(!emailFound) {
-    messageRef.innerHTML = 'La tua E-Mail non è presente in elenco!! Non puoi accedere.';
-    emailRequestRef.className = 'bg-red-ad';
 }
 
-
-
-
-
-
-
-
-
+if (!emailFound) {
+  messageRef.innerHTML =
+    "La tua E-Mail non è presente in elenco!! Non puoi accedere.";
+  emailRequestRef.className = "bg-red-ad";
+}
 
 /* 
 Gioco dei dadi
@@ -74,12 +65,13 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
 */
 
+console.log(
+  "========================================================================================="
+);
 
-console.log('=========================================================================================');
+const rollTheDiceRef = document.getElementById("rollTheDice");
 
-
-
-
+const resultRef = document.getElementById("result");
 
 const min = 1;
 const max = 6;
@@ -87,30 +79,30 @@ const max = 6;
 let playerX;
 let pc;
 
-const listPlayers = [
-    "Giocatore x",
-    "PC"
-];
+const listPlayers = ["Giocatore x", "PC"];
 
-for(let i = 0; i<listPlayers.length; i++){
+rollTheDiceRef.addEventListener("click", function () {
+  for (let i = 0; i < listPlayers.length; i++) {
     const numRandom = Math.floor(Math.random() * (max - min + 1) + min);
     const player = listPlayers[i];
-   if(i === 0){
-    playerX = numRandom;
-   }else{
-    pc = numRandom;
-   }
-};
+    if (i === 0) {
+      playerX = numRandom;
+    } else {
+      pc = numRandom;
+    }
+  }
 
+  if (playerX > pc) {
+    resultRef.innerHTML = `GiocatoreX ha ottenuto dai dadi il numero "${playerX}", mentre il PC ha ottenuto il numero "${pc}". Vince GiocatoreX`;
+    console.log("Vince il player GiocatoreX");
+  } else if (pc > playerX) {
+    resultRef.innerHTML = `GiocatoreX ha ottenuto dai dadi il numero "${playerX}", mentre il PC ha ottenuto il numero "${pc}". Vince il PC`;
+    console.log("Vince il PC");
+  } else {
+    resultRef.innerHTML = `GiocatoreX ha ottenuto dai dadi il numero "${playerX}", mentre il PC ha ottenuto il numero "${pc}". Pareggio`;
+    console.log("pareggio");
+  }
 
-if(playerX > pc){
-    console.log('Vince il GiocatoreX');
-}else if (pc > playerX) {
-    console.log('Vince il PC');
-}else{
-    console.log('pareggio');
-};
-
-console.log(playerX);
-console.log(pc);
-
+  console.log(playerX);
+  console.log(pc);
+});
