@@ -84,8 +84,6 @@ const max = 6;
 let playerX;
 let pc;
 
-
-
 const listPlayers = [
     "Giocatore x",
     "PC"
@@ -95,12 +93,19 @@ for(let i = 0; i<listPlayers.length; i++){
     const numRandom = Math.floor(Math.random() * (max - min + 1) + min);
     const player = listPlayers[i];
    if(i === 0){
-    console.log(player.slice(0));
     playerX = numRandom;
    }else{
-    console.log(player);
     pc = numRandom;
    }
+};
+
+
+if(playerX > pc){
+    console.log('Vince il giocatore "PlayerX"');
+}else if (pc > playerX) {
+    console.log('Vince il PC');
+}else{
+    console.log('Vince il PC');
 };
 
 console.log(playerX);
