@@ -1,0 +1,13 @@
+/* !"DEBUG" DA ELIMINARE TERMINATO IL CODICE*/
+.debug {
+    background-color: rgba(0, 102, 255, 0.5);
+    border: 1px solid #000;
+}
+
+.bg-chart-ad {
+    background-color: chartreuse;
+}
+
+.bg-red-ad {
+    background-color: rgb(255, 0, 0);
+}
