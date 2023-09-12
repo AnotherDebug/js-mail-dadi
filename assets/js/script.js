@@ -87,7 +87,8 @@ const listPlayers = [
 ];
 
 for(let i = 0; i<listPlayers.length; i++){
-    
+    const player = listPlayers[i];
+    console.log(player + [i] );
 };
 
 console.log(numRandom);
