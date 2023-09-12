@@ -16,7 +16,7 @@ stampa un messaggio appropriato sull’esito del controllo.
 
 */
 
-/* 
+
 
 const emailListReg = [
     "antonio.faddanno@yahoo.it",
@@ -28,7 +28,7 @@ const emailListReg = [
 
 let emailFound = false;
 
-const emailRequest = prompt('Inserisci la tua E-Mail');
+//const emailRequest = prompt('Inserisci la tua E-Mail');
 
 for(let i = 0; i<emailListReg.length; i++) {
   const emailList = emailListReg[i];
@@ -45,7 +45,7 @@ if(!emailFound) {
 }
 
 
- */
+
 
 
 
@@ -101,11 +101,11 @@ for(let i = 0; i<listPlayers.length; i++){
 
 
 if(playerX > pc){
-    console.log('Vince il giocatore "PlayerX"');
+    console.log('Vince il GiocatoreX');
 }else if (pc > playerX) {
     console.log('Vince il PC');
 }else{
-    console.log('Vince il PC');
+    console.log('pareggio');
 };
 
 console.log(playerX);
