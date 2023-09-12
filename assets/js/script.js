@@ -80,9 +80,11 @@ console.log('===================================================================
 
 const min = 1;
 const max = 6;
-const numRandom = Math.floor(Math.random() * (max - min + 1) + min);
+
 let playerX;
 let pc;
+
+
 
 const listPlayers = [
     "Giocatore x",
@@ -90,9 +92,17 @@ const listPlayers = [
 ];
 
 for(let i = 0; i<listPlayers.length; i++){
+    const numRandom = Math.floor(Math.random() * (max - min + 1) + min);
     const player = listPlayers[i];
-    console.log(player + [i] );
+   if(i === 0){
+    console.log(player.slice(0));
+    playerX = numRandom;
+   }else{
+    console.log(player);
+    pc = numRandom;
+   }
 };
 
-console.log(numRandom);
+console.log(playerX);
+console.log(pc);
 
