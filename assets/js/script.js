@@ -16,7 +16,8 @@ stampa un messaggio appropriato sull’esito del controllo.
 
 */
 
-
+const messageRef = document.getElementById('message');
+const emailRequestRef = document.getElementById('emailRequest');
 
 const emailListReg = [
     "antonio.faddanno@yahoo.it",
@@ -28,20 +29,22 @@ const emailListReg = [
 
 let emailFound = false;
 
-//const emailRequest = prompt('Inserisci la tua E-Mail');
+const emailRequest = prompt('Inserisci la tua E-Mail');
 
 for(let i = 0; i<emailListReg.length; i++) {
   const emailList = emailListReg[i];
 
   if(emailRequest === emailList) {
     emailFound = true;
-    console.log('La tua E-Mail è presente in elenco.');
+    messageRef.innerHTML = 'La tua mail è presente in elenco! Puoi accedere.';
+    emailRequestRef.className = 'bg-chart-ad';
   }
 
 };
 
 if(!emailFound) {
-    console.log('La tua E-Mail non è presente in elenco!!');
+    messageRef.innerHTML = 'La tua E-Mail non è presente in elenco!! Non puoi accedere.';
+    emailRequestRef.className = 'bg-red-ad';
 }
 
 
